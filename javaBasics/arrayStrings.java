@@ -99,8 +99,96 @@ public class arrayStrings {
         // Displaying output to user ...
         // There are two syntaxes to use when outputting code to user :
         /**
-         *      1.println() -> 
-         *      2.print() -> 
+         *      1.println() ->  Take the cousur onto the nextline
+         *      2.print() ->    Does not take the cousur to the next line
           *       */ 
+
+        // ::ESCAPE SEQUENCES [PRINTING UNPRINTABLE CHARACTERS -> such as tab or new line and others...]
+        
+        System.out.println("::Escape Sequences::");
+        // to print out a tabwe use -> \t
+        System.out.println("Using \ttab");
+        // To print a newline -> \n
+        System.out.println("Printing \nnew line");
+        // To print a backlash char itself -> "\\""
+        System.out.println("Printing a backslah \\");
+        // To print out Double quotes -> \"
+        System.out.println("Double Quotes : \" ");
+        
+        
+        //Formatting outputs (^_^)
+        System.out.println("::Formatting outputs::");
+        //using the printf() methods gives us more control over the format of the output...Like in the above example
+        System.out.println("The answer fo 5.45 divided by 3 is " + (5.45/3)); // No control over the formatted output [As we have not used the printf() method]
+        //using the prinf() method[which requires args] to control how our output is displayed
+        System.out.printf("The answer of %.3f divided by %d is %.2f.",5.45,3,5.45/3);
+        /**
+         *  The args explained properly:
+         *      -> Firstly the format specifiers serve as placeholders and are replaced by the args that follow
+         *         ->Format specifiersalways begin with a (%) and end with a converter(such as d(decimal), f(float))
+         *         ->In between the % sign and the convertor, you can add add information known as flags.
+         *              -> In this examples %.3f
+         *                  --> f is the converter, tells the compiler that we are accepting only float/double value else prints out an error
+         *                  --> .3 is the flag, it indicates that we want to display the number with 3 decimal places 
+         * 
+         * 
+         * */
+        System.out.println("::Convertors::");
+
+         /*
+         * 
+         *  Converters
+         * 
+         *      The integer converter: %d 
+         * 
+         *          -> This converter is for formatting integers such as byte, short, int, and long
+         *              --> else this will return an error if the wrong data type is inserted
+         *      
+         *      The newline Converter: %n
+         * 
+         *          -> This converter moves the cursor to the next line
+         *              --> Example
+         *                  -+->System.out.prinf("%d%n%f",12,3);
+         *              --> Output    
+         *                  -+->12
+         *                  -+->3
+         *      
+         *      The width flag (number in between % and the specifier[d,f])
+         *          
+         *          -> This flag is used to specify the totl width
+         * 
+         *              --> Example 
+         *                  -+-> System.out.printf("%8d",12)  // -> in this case 8
+         *              --> Output
+         *                  -+->        12
+         *                          =+=> in the above output, there are 6 spaces in front of the number 12 giving us a total width of 8
+         * 
+         *              --> Example 2 
+         *                  -+-> System.out.printf("%8.2f", 12.4);
+         *              --> Output
+         *                  -+->    12.40
+         *                          =+=> in the above, there are 3 spaces in front of the number total to a width of 8 including the decimal point*
+         * 
+         *      The Thousand separator flag: (,) 
+         * 
+         *          -> this flag is used to display numbers with a thousand seperator
+         * 
+         *              --> Example 1 
+         *                  -+-> System.out.printf("%,d",12345)
+         *              --> Output
+         *                  -+-> 12,345
+         * 
+         *              --> Example 2 
+         *                  -+-> System.out.println("%,.2f",12345.56789)
+         *              --> OUtpuit
+         *                  -+-> 12345.57
+         * */
+        System.out.printf("The newline converter: %d%n%d%n",12,48 );
+        System.out.printf("The width flag : %30d%n",12);
+        System.out.printf("%12.3f%n",12.4567);
+        System.out.printf("The thousand converter :  %,100d%n",123456);
+
+        // Flow control Statements (Phew)
+
     }
 }
